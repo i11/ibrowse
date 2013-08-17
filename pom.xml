@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.erlang</groupId>
+	<artifactId>ibrowse</artifactId>
+	<version>4.0.1-SNAPSHOT</version>
+	<packaging>erlang-std</packaging>
+	<name>ibrowse</name>
+	<description>Erlang HTTP client application</description>
+	<scm>
+		<connection>scm:git:https://github.com/i11/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:https://github.com/i11/${project.artifactId}.git</developerConnection>
+		<url>scm:git:https://github.com/i11/${project.artifactId}.git</url>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>eu.lindenbaum</groupId>
+				<artifactId>maven-erlang-plugin</artifactId>
+				<version>2.2.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<skipDialyzer>true</skipDialyzer>
+					<compilerOptions>warn_unused_vars, nowarn_shadow_vars, warn_unused_import</compilerOptions>
+					<testCompilerOptions>warn_unused_vars, nowarn_shadow_vars, warn_unused_import</testCompilerOptions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
